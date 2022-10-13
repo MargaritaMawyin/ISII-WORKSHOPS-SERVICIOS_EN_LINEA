@@ -4,6 +4,10 @@ public class Customer {
 
 	public Customer() {
 		// TODO Auto-generated constructor stub
+		int age;
+		String gender;
+		String stateCivil;
+		String pedro;
 	}
 
 }
