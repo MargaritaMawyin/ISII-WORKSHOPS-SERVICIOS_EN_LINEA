@@ -7,7 +7,15 @@ public class Customer {
 		int age;
 		String gender;
 		String stateCivil;
-		String pedro;
+		
+		public void setAge(int age){
+			   this.age=age;
+	}
+		public void setGender(String gender){
+			   this.gender=gender;
+	}
+		public void setStateCivil(int stateCivil){
+			   this.stateCivil=stateCivil;
 	}
 
 }
