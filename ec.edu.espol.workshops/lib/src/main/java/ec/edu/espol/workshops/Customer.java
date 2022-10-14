@@ -14,7 +14,7 @@ public class Customer {
 		public void setGender(String gender){
 			   this.gender=gender;
 	}
-		public void setStateCivil(int stateCivil){
+		public void setStateCivil(String stateCivil){
 			   this.stateCivil=stateCivil;
 	}
 
