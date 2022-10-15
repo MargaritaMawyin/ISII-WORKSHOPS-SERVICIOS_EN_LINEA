@@ -2,23 +2,23 @@ package ec.edu.espol.workshops;
 
 public class Customer {
 	private int age;
-	private String gender;
-	private String stateCivil;
+	private char gender;
+	private boolean stateCivil;
 	
 	public Customer() {
 		this.age = 18;
-		this.gender = "Masculino";
-		this.stateCivil = "Casado";
+		this.gender = 'M';
+		this.stateCivil = false;
 	}
 
 	//Getters by Kevin
 	public int getAge() {
 		return this.age;
 	}
-	public String getGender() {
+	public char getGender() {
 		return this.gender ;
 	}
-	public String getStateCivil() {
+	public boolean getStateCivil() {
 		return this.stateCivil;
 	}
 	
@@ -26,11 +26,22 @@ public class Customer {
 	public void setAge(int age){
 	   this.age=age;
 	}
-	public void setGender(String gender){
+	public void setGender(char gender){
 	   this.gender=gender;
 	}
-	public void setStateCivil(String stateCivil){
+	public void setStateCivil(boolean stateCivil){
 	   this.stateCivil=stateCivil;
 	}
 
+	public boolean isMarried() {
+		return this.getStateCivil();
+	}
+	
+	public boolean isMale() {
+		return (this.gender == 'M');
+	}
+	
+	public boolean ageLessThan(int age) {
+		return (this.age < age);
+	}
 }
