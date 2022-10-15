@@ -1,5 +1,7 @@
 package ec.edu.espol.workshops;
 
+import javax.naming.directory.NoSuchAttributeException;
+
 public class Customer {
 	private int age;
 	private char gender;
@@ -10,6 +12,12 @@ public class Customer {
 		this.gender = 'M';
 		this.stateCivil = false;
 	}
+	public Customer(int age, char gender, boolean stateCivil) {
+		this.age = age;
+		this.gender = gender;
+		this.stateCivil = stateCivil;
+	}
+
 
 	//Getters by Kevin
 	public int getAge() {
@@ -32,7 +40,7 @@ public class Customer {
 	public void setStateCivil(boolean stateCivil){
 	   this.stateCivil=stateCivil;
 	}
-
+    //Functions for Customer
 	public boolean isMarried() {
 		return this.getStateCivil();
 	}
@@ -43,5 +51,8 @@ public class Customer {
 	
 	public boolean ageLessThan(int age) {
 		return (this.age < age);
+	}
+	public boolean ageMoreThan(int age) {
+		return (this.age > age);
 	}
 }
