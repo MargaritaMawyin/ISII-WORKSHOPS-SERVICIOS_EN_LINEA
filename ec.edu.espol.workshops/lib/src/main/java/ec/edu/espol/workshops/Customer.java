@@ -7,7 +7,7 @@ public class Customer {
 		int age;
 		String gender;
 		String stateCivil;
-		String pedro;
+	
 	}
 
 }
