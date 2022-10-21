@@ -28,9 +28,7 @@ public class CarInsurance {
     char gender = res == 0 ? 'M' : 'F';
     System.out.println("What is your civil state? \n 0)single \n 1)married ");
     boolean married = sc.nextInt() == 1;
-    Customer customer = new Customer(age, gender, married);
-    verify_business_rules(customer);
-    System.out.println(verify_business_rules(customer));
+    System.out.println(verify_business_rules(new Customer(age, gender, married)));
 
     sc.close();
   }
