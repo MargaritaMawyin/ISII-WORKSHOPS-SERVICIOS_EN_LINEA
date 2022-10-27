@@ -12,15 +12,6 @@ public class Customer {
 
   /**
    * Summary of JavaDoc will be here.
-   */
-  public Customer() {
-    this.age = 18;
-    this.gender = 'M';
-    this.stateCivil = false;
-  }
-
-  /**
-   * Summary of JavaDoc will be here.
    *
    * @param age Description will be here.
    * @param gender Description will be here.

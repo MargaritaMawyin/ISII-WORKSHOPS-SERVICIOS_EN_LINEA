@@ -12,7 +12,7 @@ public class CarInsurance {
   /**
    * Static variable that contains the base of premium.
    */
-  public static int BASE_PREMIUM = 500;
+  private static int BASE_PREMIUM = 500;
 
   /**
    * Main of the application, this main will be run.
@@ -36,11 +36,12 @@ public class CarInsurance {
   /**
    * Static function which verify the rules of the business.
    *
-   * @param customer Receive a Customer object to verify if the customer complies with the rules.
+   * @param customer Receive a Customer object to verify if the 
+   * customer complies with the rules.
    * @return An integer with the amount of premium or -1 in error.
    */
   public static int verify_business_rules(Customer customer) {
-    int premiumCar = 500;
+    int premiumCar = BASE_PREMIUM;
     if (validatePolitics(customer)) {
 
       if (!customer.isMarried() && customer.isMale() && customer.ageLessThan(25)) {
