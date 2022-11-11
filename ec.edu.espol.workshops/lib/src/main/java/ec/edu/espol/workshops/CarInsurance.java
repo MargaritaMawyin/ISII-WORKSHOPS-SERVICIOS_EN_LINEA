@@ -46,9 +46,11 @@ public class CarInsurance {
 
       if (!customer.isMarried() && customer.isMale() && customer.ageLessThan(25)) {
         premiumCar += 1500;
-      } else if (!customer.isMale() || customer.isMarried()) {
+      }
+      if (!customer.isMale() || customer.isMarried()) {
         premiumCar -= 200;
-      } else if (customer.ageMoreThan(45) && customer.ageLessThan(65)) {
+      }
+      if (customer.ageMoreThan(45) && customer.ageLessThan(65)) {
         premiumCar -= 100;
       }
       return premiumCar;
