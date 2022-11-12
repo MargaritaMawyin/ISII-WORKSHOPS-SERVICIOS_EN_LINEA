@@ -2,6 +2,8 @@ package ec.edu.espol.workshops;
 
 import java.util.Scanner;
 
+import org.checkerframework.common.returnsreceiver.qual.This;
+
 /**
  * Summary of JavaDoc will be here.
  *
@@ -22,15 +24,68 @@ public class CarInsurance {
   public static void main(String[] args) {
     Scanner sc = new Scanner(System.in);
     System.out.println("Type your age");
-    int age = sc.nextInt();
+    int age = getIntegerValue(sc);
+    if(age == -1) {
+      System.out.println("Input only number between 18 and 120");
+      System.exit(age);
+    }
+    verifyLimitAge(age);
+    
     System.out.println("Type your gender \n 0)Male \n 1)Female");
-    int res = sc.nextInt();
+    int res = getIntegerValue(sc);
+    if(res == -1) {
+      System.out.println("Input only 0 or 1");
+      System.exit(res);
+    }
+    verifyValuesInRange(res, 0, 1);
     char gender = res == 0 ? 'M' : 'F';
+    
     System.out.println("What is your civil state? \n 0)single \n 1)married ");
-    boolean married = sc.nextInt() == 1;
+    int valueObtained = getIntegerValue(sc);
+    if(valueObtained == -1) {
+      System.out.println("Input only 0 or 1");
+      System.exit(valueObtained);
+    }
+    verifyValuesInRange(valueObtained, 0, 1);
+    boolean married = valueObtained == 1;
     System.out.println(verify_business_rules(new Customer(age, gender, married)));
 
     sc.close();
+  }
+  
+  /**
+   * 
+   * @return
+   */
+  public static int getIntegerValue(Scanner sc) {
+    try {
+      int value = sc.nextInt();
+      return value;
+    } catch (Exception e) {
+      return -1;
+    }
+  } 
+ 
+  /**
+   * @param age
+   */
+  public static void verifyLimitAge(int age) {
+    if(age<18 || age>=120) {
+      System.out.println("Input only number between 18 and 120");
+      System.exit(-1);
+    }
+  }
+  
+  /**
+   * @param value
+   * @param min
+   * @param max
+   */
+  public static void verifyValuesInRange(int value, int min, int max) {
+    if(value<min || value>max) {
+      System.out.println("Input only "+min+" or "+max);
+      System.exit(-1);
+    }
   }
 
   /**
