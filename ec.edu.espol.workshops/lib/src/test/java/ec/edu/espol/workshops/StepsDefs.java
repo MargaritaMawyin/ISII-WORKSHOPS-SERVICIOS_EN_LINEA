@@ -18,7 +18,7 @@ public class StepsDefs {
 	  }
 
 	  @When("calculate the insurance prime and ask if is 700")
-	  public void ask_if_insurance_prime_is600() {
+	  public void ask_if_insurance_prime_is600000() {
 	    int insurancePrime = this.calculate_the_insurance_prime();
 	    this.actualAnswer = insurancePrime == 700 ? "Yes" : "No";
 	  }
