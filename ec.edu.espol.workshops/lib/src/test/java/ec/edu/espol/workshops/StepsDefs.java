@@ -17,10 +17,10 @@ public class StepsDefs {
 	    this.customer = new Customer(Integer.parseInt(age), charGender, isMarried);
 	  }
 
-	  @When("calculate the insurance prime and ask if is 600")
+	  @When("calculate the insurance prime and ask if is 700")
 	  public void ask_if_insurance_prime_is600() {
 	    int insurancePrime = this.calculate_the_insurance_prime();
-	    this.actualAnswer = insurancePrime == 600 ? "Yes" : "No";
+	    this.actualAnswer = insurancePrime == 700 ? "Yes" : "No";
 	  }
 
 	  @Then("the answer should be {string}")

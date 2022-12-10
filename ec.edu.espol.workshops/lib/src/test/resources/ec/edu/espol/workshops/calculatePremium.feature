@@ -1,8 +1,8 @@
 Feature: Calculate the insurance prime for a customer
 	
-	Scenario Outline: The insurance prime for a customer is or not 600
+	Scenario Outline: The insurance prime for a customer is or not 700
 		Given the customer is a "<age>" years old "<civilState>" "<gender>"
-		When calculate the insurance prime and ask if is 600
+		When calculate the insurance prime and ask if is 700
 		Then the answer should be "<answer>"
 	
 Examples:
