@@ -23,30 +23,8 @@ public class Customer {
     this.stateCivil = stateCivil;
   }
 
-  // Getters by Kevin
-  public int getAge() {
-    return this.age;
-  }
-
-  public char getGender() {
-    return this.gender;
-  }
-
   public boolean getStateCivil() {
     return this.stateCivil;
-  }
-
-  // Setters by Margarita
-  public void setAge(int age) {
-    this.age = age;
-  }
-
-  public void setGender(char gender) {
-    this.gender = gender;
-  }
-
-  public void setStateCivil(boolean stateCivil) {
-    this.stateCivil = stateCivil;
   }
 
   // Functions for Customer
