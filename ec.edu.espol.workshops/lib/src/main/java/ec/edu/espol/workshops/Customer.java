@@ -41,6 +41,6 @@ public class Customer {
   }
 
   public boolean ageMoreThan(int age) {
-    return (this.age >= age);
+    return (this.age > age);
   }
 }
